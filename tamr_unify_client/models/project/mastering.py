@@ -1,3 +1,6 @@
+from tamr_unify_client.models.attribute_configuration.collection import (
+    AttributeConfigurationCollection,
+)
 from tamr_unify_client.models.binning_model import BinningModel
 from tamr_unify_client.models.dataset.resource import Dataset
 from tamr_unify_client.models.machine_learning_model import MachineLearningModel
@@ -122,6 +125,16 @@ class MasteringProject(Project):
         unified_dataset = self.unified_dataset()
         name = unified_dataset.name + "_dedup_published_clusters_with_data"
         return self.client.datasets.by_name(name)
+
+    def attribute_configurations(self):
+        """ Project's attribute's configurations.
+        :returns: the configurations of the attributes of a project
+        :rtype :class: 'tamr_unify_client.models.attribute_configuration.collection.AttributeConfigurationCollection'
+        """
+
+        alias = self.api_path + "/attributeConfigurations"
+        info = AttributeConfigurationCollection(self.client, api_path=alias)
+        return info
 
     def binning_model(self):
         """
