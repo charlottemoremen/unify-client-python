@@ -1,7 +1,10 @@
-## 0.7.0-dev
+## 0.8.0-dev
+
+## 0.7.0
   **BREAKING CHANGES**
   - [#156](https://github.com/Datatamer/unify-client-python/issues/156) Fetch Dataset profile, even if out of date.
-  - [#161](https://github.com/Datatamer/unify-client-python/issues/161) Move `create_attribute` from Dataset to AttributeCollection 
+  - [#161](https://github.com/Datatamer/unify-client-python/issues/161) Move `create_attribute` from Dataset to AttributeCollection
+  - The `Project` method `add_source_dataset` has been renamed `add_input_dataset` to model the API endpoint.
 
   **NEW FEATURES**
   - [#65](https://github.com/Datatamer/unify-client-python/issues/65) Fetches published clusters with data represented as a dataset.
@@ -9,9 +12,11 @@
   - [#165](https://github.com/Datatamer/unify-client-python/issues/165) Add `geo_attr` parameter to `Dataset.itergeofeatures()` and `Dataset.from_geo_features()`
   - [#113](https://github.com/Datatamer/unify-client-python/issues/113) Add support for uploading a binningModel
   - [#168](https://github.com/Datatamer/unify-client-python/issues/168) Add support for project attributes
+  - [#171](https://github.com/Datatamer/unify-client-python/issues/171) Add support for creating and retrieving taxonomies
+  - [#178](https://github.com/Datatamer/unify-client-python/issues/178) Add support for retrieving input datasets
 
   **BUG FIXES**
-  - [#148](https://github.com/Datatamer/unify-client-python/issues/148) Fix null geo, id and absent id bug for geospatial datasets. 
+  - [#148](https://github.com/Datatamer/unify-client-python/issues/148) Fix null geo, id and absent id bug for geospatial datasets.
   - [#161](https://github.com/Datatamer/unify-client-python/issues/161) DatasetCollection.create() and ProjectCollection.create() don't work
   - [#165](https://github.com/Datatamer/unify-client-python/issues/165) Dataset.itergeofeatures() is too slow
 
